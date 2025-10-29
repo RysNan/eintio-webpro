@@ -6,7 +6,8 @@ const en = {
     "jumbotron": {
         "header": '/header.jpg',
         "title": "Eintio",
-        "description": "Academic and Technology"
+        "description": "Academic and Technology",
+        "brief": "Trusted solutions for digital transformation and human resource development in information technology and education"
     },
     "about": {
         "title": "About Company",

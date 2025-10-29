@@ -6,7 +6,8 @@ const id = {
     "jumbotron": {
         "header": '/header.jpg',
         "title": "Eintio",
-        "description": "Pendidikan dan Teknologi"
+        "description": "Pendidikan dan Teknologi",
+        "brief": "Solusi terpercaya untuk transformasi digital dan pengembangan SDM di bidang teknologi informasi dan pendidikan"
     },
     "about": {
         "title": "Tentang Perusahaan",
