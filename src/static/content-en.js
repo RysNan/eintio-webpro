@@ -218,10 +218,10 @@ const en = {
         "social": {
             "title": "Social Media",
             "links": [
-                { "type": "facebook", "url": "#" },
-                { "type": "twitter", "url": "#" },
-                { "type": "instagram", "url": "#" },
-                { "type": "linkedin", "url": "#" }
+                { "type": "facebook", "url": "https://www.facebook.com/share/1JkpJd4gZu/" },
+                { "type": "twitter", "url": "https://x.com/eintio_id" },
+                { "type": "instagram", "url": "https://www.instagram.com/eintio.id" },
+                { "type": "linkedin", "url": "https://www.linkedin.com/in/eintio-id-083902390/" }
             ]
         },
         "copyright": "© 2025 Eintio. All rights reserved."
