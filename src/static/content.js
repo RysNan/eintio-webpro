@@ -11,16 +11,30 @@ const id = {
     "about": {
         "title": "Tentang Perusahaan",
         "subtitle": "Kami adalah perusahaan yang berfokus pada inovasi pendidikan dan teknologi untuk masa depan yang lebih baik",
+        "vision": {
+            "title": "Visi",
+            "description": "Menjadi mitra terpercaya dalam transformasi digital dan pengembangan sumber daya manusia di bidang teknologi informasi dan pendidikan, dengan berkomitmen untuk menciptakan solusi inovatif yang memberdayakan individu dan organisasi dalam menghadapi tantangan era digital."
+        },
+        "mission": {
+            "title": "Misi",
+            "items": [
+                "Memberikan solusi teknologi inovatif dan berkualitas tinggi yang memenuhi kebutuhan spesifik setiap klien",
+                "Menyediakan pendidikan dan pelatihan berkualitas tinggi dalam bidang IT, Digital Business, dan teknologi terkini",
+                "Memberdayakan individu dan organisasi melalui program pelatihan, konsultasi, dan pendampingan yang komprehensif",
+                "Mengembangkan produk dan layanan kreatif yang berdampak positif bagi kemajuan teknologi dan pendidikan di Indonesia",
+                "Membangun ekosistem kolaboratif yang mendukung pertumbuhan talenta digital dan inovasi berkelanjutan"
+            ]
+        },
         "values": [
-            {
-                "type": "vision",
-                "title": "Visi",
-                "description": "Menjadi pemimpin dalam solusi pendidikan dan teknologi yang inovatif"
-            },
             {
                 "type": "innovation",
                 "title": "Inovasi",
                 "description": "Mengembangkan solusi kreatif untuk tantangan modern"
+            },
+            {
+                "type": "quality",
+                "title": "Kualitas",
+                "description": "Berkomitmen memberikan hasil terbaik dalam setiap proyek"
             },
             {
                 "type": "collaboration",
@@ -32,36 +46,31 @@ const id = {
     "services": {
         "title": "Layanan Kami",
         "subtitle": "Solusi lengkap untuk kebutuhan pendidikan dan teknologi Anda",
-        "items": [
+        "categories": [
             {
-                "type": "web",
-                "title": "Pengembangan Web",
-                "description": "Membangun website modern dan responsif sesuai kebutuhan bisnis Anda"
+                "type": "academic",
+                "title": "Akademik",
+                "items": [
+                    "Mengajar di IT/IS/Digital Business",
+                    "Mengajar kelas coding",
+                    "Bantuan skripsi sarjana",
+                    "Bantuan tesis / disertasi",
+                    "Bantuan penulisan paper untuk jurnal"
+                ]
             },
             {
-                "type": "mobile",
-                "title": "Aplikasi Mobile",
-                "description": "Mengembangkan aplikasi mobile yang user-friendly untuk iOS dan Android"
-            },
-            {
-                "type": "elearning",
-                "title": "Platform E-Learning",
-                "description": "Solusi pembelajaran online yang interaktif dan mudah digunakan"
-            },
-            {
-                "type": "thesis",
-                "title": "Bimbingan Skripsi",
-                "description": "Bimbingan komprehensif untuk penulisan dan penyelesaian skripsi atau tesis"
-            },
-            {
-                "type": "design",
-                "title": "UI/UX Design",
-                "description": "Desain antarmuka yang menarik dan pengalaman pengguna yang optimal"
-            },
-            {
-                "type": "video",
-                "title": "Editing Video",
-                "description": "Layanan editing video profesional untuk konten kreatif dan promosi"
+                "type": "technology",
+                "title": "Teknologi",
+                "items": [
+                    "Website",
+                    "Aplikasi",
+                    "Game",
+                    "Social Media (Live IG/Facebook/Tiktok)",
+                    "Desain/Editing Foto-Video/Drone",
+                    "Animasi (Dalam Pengembangan)",
+                    "Karikatur (Dalam Pengembangan)",
+                    "Keamanan Siber (Dalam Pengembangan)"
+                ]
             }
         ]
     },

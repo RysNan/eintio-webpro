@@ -1,20 +1,16 @@
 import { useLanguage } from "../context/LanguageContext";
-import { FaLaptopCode, FaMobileAlt, FaGraduationCap, FaBookOpen, FaPalette, FaVideo } from 'react-icons/fa';
+import { FaGraduationCap, FaLaptopCode, FaCheckCircle } from 'react-icons/fa';
 import type { IconType } from "react-icons";
 
-interface Service {
-  type: 'web' | 'mobile' | 'elearning' | 'thesis' | 'design' | 'video';
+interface ServiceCategory {
+  type: 'academic' | 'technology';
   title: string;
-  description: string;
+  items: string[];
 }
 
-const iconMap: { [key in Service['type']]: IconType } = {
-  'web': FaLaptopCode,
-  'mobile': FaMobileAlt,
-  'elearning': FaGraduationCap,
-  'thesis': FaBookOpen,
-  'design': FaPalette,
-  'video': FaVideo
+const iconMap: { [key in ServiceCategory['type']]: IconType } = {
+  'academic': FaGraduationCap,
+  'technology': FaLaptopCode
 };
 
 const Services = () => {
@@ -30,18 +26,48 @@ const Services = () => {
             {content.services.subtitle}
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {content.services.items.map((service: Service, index: number) => {
-            const IconComponent = iconMap[service.type];
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {content.services.categories.map((category: ServiceCategory, index: number) => {
+            const IconComponent = iconMap[category.type];
             return (
-              <div key={index} className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl hover:bg-[#F5A201] group transition-all duration-300 cursor-pointer hover:shadow-2xl hover:scale-105 border border-white/10">
-                <IconComponent className="text-6xl text-[#F5A201] group-hover:text-white mb-6 transition-colors" />
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-white/70 group-hover:text-white/90 text-lg leading-relaxed transition-colors">
-                  {service.description}
-                </p>
+              <div 
+                key={index} 
+                className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-10 border border-white/10 hover:border-[#F5A201]/50 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
+              >
+                {/* Category Header */}
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-16 h-16 bg-[#F5A201] rounded-2xl flex items-center justify-center shrink-0">
+                    <IconComponent className="text-3xl text-white" />
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-black text-white">
+                    {category.title}
+                  </h3>
+                </div>
+                
+                {/* Services List */}
+                <ul className="space-y-4">
+                  {category.items.map((item: string, itemIndex: number) => {
+                    const isInProgress = item.includes('Progress') || item.includes('Pengembangan');
+                    return (
+                      <li 
+                        key={itemIndex} 
+                        className="flex items-start gap-3 group"
+                      >
+                        <FaCheckCircle className={`text-xl shrink-0 mt-0.5 transition-colors ${
+                          isInProgress ? 'text-white/30' : 'text-[#F5A201] group-hover:text-white'
+                        }`} />
+                        <span className={`text-lg leading-relaxed transition-colors ${
+                          isInProgress 
+                            ? 'text-white/50 italic' 
+                            : 'text-white/90 group-hover:text-white'
+                        }`}>
+                          {item}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             );
           })}

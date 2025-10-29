@@ -11,16 +11,30 @@ const en = {
     "about": {
         "title": "About Company",
         "subtitle": "We are a company focused on education and technology innovation for a better future",
+        "vision": {
+            "title": "Vision",
+            "description": "To be a trusted partner in digital transformation and human resource development in information technology and education, committed to creating innovative solutions that empower individuals and organizations to face the challenges of the digital era."
+        },
+        "mission": {
+            "title": "Mission",
+            "items": [
+                "Provide innovative and high-quality technology solutions that meet the specific needs of each client",
+                "Deliver high-quality education and training in IT, Digital Business, and cutting-edge technologies",
+                "Empower individuals and organizations through comprehensive training programs, consulting, and mentoring",
+                "Develop creative products and services that positively impact the advancement of technology and education in Indonesia",
+                "Build a collaborative ecosystem that supports the growth of digital talent and sustainable innovation"
+            ]
+        },
         "values": [
-            {
-                "type": "vision",
-                "title": "Vision",
-                "description": "To be a leader in innovative education and technology solutions"
-            },
             {
                 "type": "innovation",
                 "title": "Innovation",
                 "description": "Developing creative solutions for modern challenges"
+            },
+            {
+                "type": "quality",
+                "title": "Quality",
+                "description": "Committed to delivering the best results in every project"
             },
             {
                 "type": "collaboration",
@@ -32,36 +46,31 @@ const en = {
     "services": {
         "title": "Our Services",
         "subtitle": "Complete solutions for your education and technology needs",
-        "items": [
+        "categories": [
             {
-                "type": "web",
-                "title": "Web Development",
-                "description": "Building modern and responsive websites for your business needs"
+                "type": "academic",
+                "title": "Academic",
+                "items": [
+                    "Teaching in IT/IS/Digital Business",
+                    "Teaching coding classes",
+                    "Undergraduate thesis assistance",
+                    "Thesis / Dissertation assistance",
+                    "Assistance in writing papers for journals"
+                ]
             },
             {
-                "type": "mobile",
-                "title": "Mobile Applications",
-                "description": "Developing user-friendly mobile apps for iOS and Android"
-            },
-            {
-                "type": "elearning",
-                "title": "E-Learning Platform",
-                "description": "Interactive and easy-to-use online learning solutions"
-            },
-            {
-                "type": "thesis",
-                "title": "Thesis Guidance",
-                "description": "Comprehensive guidance for thesis and dissertation writing and completion"
-            },
-            {
-                "type": "design",
-                "title": "UI/UX Design",
-                "description": "Attractive interface design and optimal user experience"
-            },
-            {
-                "type": "video",
-                "title": "Video Editing",
-                "description": "Professional video editing services for creative and promotional content"
+                "type": "technology",
+                "title": "Technology",
+                "items": [
+                    "Website",
+                    "Application",
+                    "Game",
+                    "Social Media (Live IG/Facebook/Tiktok)",
+                    "Designing/Editing Photo-Video/Drone",
+                    "Animation (In Progress)",
+                    "Caricature (In Progress)",
+                    "Cyber Security (In Progress)"
+                ]
             }
         ]
     },

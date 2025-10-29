@@ -1,16 +1,16 @@
 import { useLanguage } from "../context/LanguageContext";
-import { FaBullseye, FaLightbulb, FaHandshake } from 'react-icons/fa';
+import { FaLightbulb, FaHandshake, FaEye, FaFlag, FaStar, FaCheckCircle } from 'react-icons/fa';
 import type { IconType } from "react-icons";
 
 interface AboutValue {
-  type: 'vision' | 'innovation' | 'collaboration';
+  type: 'innovation' | 'quality' | 'collaboration';
   title: string;
   description: string;
 }
 
 const iconMap: { [key in AboutValue['type']]: IconType } = {
-  'vision': FaBullseye,
   'innovation': FaLightbulb,
+  'quality': FaStar,
   'collaboration': FaHandshake
 };
 
@@ -19,6 +19,7 @@ const About = () => {
   return (
     <section id="company" className="w-full px-6 py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-black mb-6 text-[#013C58]">
             {content.about.title}
@@ -27,6 +28,48 @@ const About = () => {
             {content.about.subtitle}
           </p>
         </div>
+
+        {/* Vision & Mission */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {/* Vision */}
+          <div className="bg-white border-2 border-[#013C58] p-8 md:p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-14 h-14 bg-[#013C58] rounded-2xl flex items-center justify-center shrink-0">
+                <FaEye className="text-2xl text-white" />
+              </div>
+              <h3 className="text-3xl md:text-4xl font-black text-[#013C58]">
+                {content.about.vision.title}
+              </h3>
+            </div>
+            <p className="text-lg md:text-xl leading-relaxed text-[#013C58]/80">
+              {content.about.vision.description}
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div className="bg-white border-2 border-[#F5A201] p-8 md:p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-14 h-14 bg-[#F5A201] rounded-2xl flex items-center justify-center shrink-0">
+                <FaFlag className="text-2xl text-white" />
+              </div>
+              <h3 className="text-3xl md:text-4xl font-black text-[#013C58]">
+                {content.about.mission.title}
+              </h3>
+            </div>
+            <ul className="space-y-3">
+              {content.about.mission.items.map((item: string, index: number) => (
+                <li key={index} className="flex items-start gap-3">
+                  <FaCheckCircle className="text-xl shrink-0 mt-0.5 text-[#F5A201]" />
+                  <span className="text-lg leading-relaxed text-[#013C58]/80">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Values */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {content.about.values.map((value: AboutValue, index: number) => {
             const IconComponent = iconMap[value.type];
