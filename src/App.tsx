@@ -5,6 +5,7 @@ import Services from './components/Services'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import WhatsAppFloat from './components/WhatsAppFloat'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
+      <WhatsAppFloat />
     </div>
   )
 }
