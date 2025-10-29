@@ -12,6 +12,8 @@ const id = {
     "about": {
         "title": "Tentang Perusahaan",
         "subtitle": "Kami adalah perusahaan yang berfokus pada inovasi pendidikan dan teknologi untuk masa depan yang lebih baik",
+        "organizationTitle": "Struktur Organisasi",
+        "organizationSubtitle": "Struktur tim dan kepemimpinan kami",
         "vision": {
             "title": "Visi",
             "description": "Menjadi mitra terpercaya dalam transformasi digital dan pengembangan sumber daya manusia di bidang teknologi informasi dan pendidikan, dengan berkomitmen untuk menciptakan solusi inovatif yang memberdayakan individu dan organisasi dalam menghadapi tantangan era digital."
@@ -42,7 +44,42 @@ const id = {
                 "title": "Kolaborasi",
                 "description": "Bekerja sama dengan klien untuk mencapai tujuan bersama"
             }
-        ]
+        ],
+        "organization": {
+            "director": {
+                "title": "Direktur",
+                "name": "Bu Dina"
+            },
+            "viceDirector": {
+                "title": "Wakil Direktur",
+                "name": "-"
+            },
+            "secretary": {
+                "title": "Sekretaris",
+                "name": "Berlian"
+            },
+            "departments": {
+                "development": {
+                    "title": "Development",
+                    "name": "Panji",
+                    "subdivisions": [
+                        { "title": "Website", "name": "Jojo" },
+                        { "title": "Aplikasi", "name": "Nathan" },
+                        { "title": "Game", "name": "-" },
+                        { "title": "Desain", "name": "-" }
+                    ]
+                },
+                "main": [
+                    { "title": "Finance", "name": "-" },
+                    { "title": "Hukum", "name": "-" },
+                    { "title": "HRD/SDM", "name": "-" },
+                    { "title": "Development", "name": "Panji" },
+                    { "title": "Akademik", "name": "-" },
+                    { "title": "Animasi", "name": "-" },
+                    { "title": "Komersial/Medsos", "name": "Yudho" }
+                ]
+            }
+        }
     },
     "services": {
         "title": "Layanan Kami",

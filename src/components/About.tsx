@@ -1,6 +1,7 @@
 import { useLanguage } from "../context/LanguageContext";
 import { FaLightbulb, FaHandshake, FaEye, FaFlag, FaStar, FaCheckCircle } from 'react-icons/fa';
 import type { IconType } from "react-icons";
+import OrganizationalChart from "./OrganizationalChart";
 
 interface AboutValue {
   type: 'innovation' | 'quality' | 'collaboration';
@@ -70,7 +71,7 @@ const About = () => {
         </div>
 
         {/* Values */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {content.about.values.map((value: AboutValue, index: number) => {
             const IconComponent = iconMap[value.type];
             return (
@@ -81,6 +82,21 @@ const About = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Organizational Structure */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl md:text-5xl font-black text-[#013C58] mb-4">
+              {content.about.organizationTitle || 'Organizational Structure'}
+            </h3>
+            <p className="text-lg text-[#013C58]/70">
+              {content.about.organizationSubtitle || 'Our team structure and leadership'}
+            </p>
+          </div>
+          <div className="bg-linear-to-br from-[#013C58]/5 to-[#F5A201]/5 rounded-3xl p-4 md:p-8">
+            <OrganizationalChart />
+          </div>
         </div>
       </div>
     </section>

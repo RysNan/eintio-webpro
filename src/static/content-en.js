@@ -11,7 +11,9 @@ const en = {
     },
     "about": {
         "title": "About Company",
-        "subtitle": "We are a company focused on education and technology innovation for a better future",
+        "subtitle": "We are a company focused on educational and technological innovation for a better future",
+        "organizationTitle": "Organizational Structure",
+        "organizationSubtitle": "Our team structure and leadership",
         "vision": {
             "title": "Vision",
             "description": "To be a trusted partner in digital transformation and human resource development in information technology and education, committed to creating innovative solutions that empower individuals and organizations to face the challenges of the digital era."
@@ -42,7 +44,42 @@ const en = {
                 "title": "Collaboration",
                 "description": "Working together with clients to achieve common goals"
             }
-        ]
+        ],
+        "organization": {
+            "director": {
+                "title": "Director",
+                "name": "Bu Dina"
+            },
+            "viceDirector": {
+                "title": "Vice Director",
+                "name": "-"
+            },
+            "secretary": {
+                "title": "Secretary",
+                "name": "Berlian"
+            },
+            "departments": {
+                "development": {
+                    "title": "Development",
+                    "name": "Panji",
+                    "subdivisions": [
+                        { "title": "Website", "name": "Jojo" },
+                        { "title": "Application", "name": "Nathan" },
+                        { "title": "Game", "name": "-" },
+                        { "title": "Design", "name": "-" }
+                    ]
+                },
+                "main": [
+                    { "title": "Finance", "name": "-" },
+                    { "title": "Legal", "name": "-" },
+                    { "title": "HRD/SDM", "name": "-" },
+                    { "title": "Development", "name": "Panji" },
+                    { "title": "Academic", "name": "-" },
+                    { "title": "Animation", "name": "-" },
+                    { "title": "Commercial/Social Media", "name": "Yudho" }
+                ]
+            }
+        }
     },
     "services": {
         "title": "Our Services",
