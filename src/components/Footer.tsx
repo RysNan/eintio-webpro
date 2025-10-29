@@ -1,0 +1,77 @@
+import { useLanguage } from "../context/LanguageContext";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import type { IconType } from "react-icons";
+
+interface SocialLink {
+  type: 'facebook' | 'twitter' | 'instagram' | 'linkedin';
+  url: string;
+}
+
+const socialIconMap: { [key in SocialLink['type']]: IconType } = {
+  'facebook': FaFacebookF,
+  'twitter': FaTwitter,
+  'instagram': FaInstagram,
+  'linkedin': FaLinkedinIn
+};
+
+const Footer = () => {
+  const { content } = useLanguage();
+  return (
+    <footer className="w-full bg-[#013C58] text-white px-6 py-16">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          <div>
+            <img src={content.navbar.logo} alt="logo" className="h-10 mb-6 brightness-0 invert" />
+            <p className="text-white/70 text-lg leading-relaxed">{content.footer.description}</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-2xl mb-6">{content.footer.quickLinks.title}</h3>
+            <ul className="space-y-3">
+              {content.footer.quickLinks.links.map((link: string, index: number) => (
+                <li key={index}>
+                  <a href="#" className="text-white/70 hover:text-[#F5A201] transition-colors text-lg">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-bold text-2xl mb-6">{content.footer.services.title}</h3>
+            <ul className="space-y-3">
+              {content.footer.services.items.map((service: string, index: number) => (
+                <li key={index}>
+                  <a href="#" className="text-white/70 hover:text-[#F5A201] transition-colors text-lg">
+                    {service}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-bold text-2xl mb-6">{content.footer.social.title}</h3>
+            <div className="flex gap-4">
+              {content.footer.social.links.map((social: SocialLink, index: number) => {
+                const IconComponent = socialIconMap[social.type];
+                return (
+                  <a
+                    key={index}
+                    href={social.url}
+                    className="w-12 h-12 bg-white/10 hover:bg-[#F5A201] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  >
+                    <IconComponent className="text-xl" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        <div className="border-t border-white/10 pt-8 text-center">
+          <p className="text-white/70 text-lg">{content.footer.copyright}</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
