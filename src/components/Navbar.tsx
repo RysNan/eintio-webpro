@@ -55,7 +55,7 @@ const Navbar = () => {
                 <li key={index}>
                   <a 
                     href={item.href}
-                    className="relative px-4 py-2 text-sm font-medium text-[#013C58] hover:text-[#F5A201] transition-colors duration-300 group"
+                    className="relative px-4 py-2 text-base font-semibold text-[#013C58] hover:text-[#F5A201] transition-colors duration-300 group"
                   >
                     {item.label}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#F5A201] group-hover:w-full transition-all duration-300"></span>
@@ -141,7 +141,7 @@ const Navbar = () => {
                   <a 
                     href={item.href}
                     onClick={handleMenuItemClick}
-                    className="block px-4 py-3 text-base font-medium text-[#013C58] hover:bg-[#F5A201]/10 hover:text-[#F5A201] rounded-lg transition-all duration-300"
+                    className="block px-4 py-3 text-lg font-semibold text-[#013C58] hover:bg-[#F5A201]/10 hover:text-[#F5A201] rounded-lg transition-all duration-300"
                   >
                     {item.label}
                   </a>
