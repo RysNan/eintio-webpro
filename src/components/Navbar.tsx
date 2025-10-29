@@ -89,21 +89,44 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            onClick={handleMenuToggle}
-            className="lg:hidden relative p-2 rounded-lg text-[#013C58] hover:bg-[#F5A201]/10 focus:outline-none focus:ring-2 focus:ring-[#F5A201] transition-colors duration-300"
-            aria-label="Toggle menu"
-          >
-            <div className="w-6 h-6">
-              <span className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${isMenuOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`}>
-                <HiMenu size={24} />
-              </span>
-              <span className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'}`}>
-                <HiX size={24} />
-              </span>
+          {/* Mobile Language Switcher & Menu Button */}
+          <div className="lg:hidden flex items-center gap-3">
+            {/* Mobile Language Switcher */}
+            <div className="flex items-center gap-1 px-2 py-1 bg-[#013C58]/5 rounded-full">
+              <button
+                onClick={() => handleLanguageChange('id')}
+                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
+                  language === 'id' ? 'bg-[#F5A201] text-white shadow-md' : 'text-[#013C58] hover:text-[#F5A201]'
+                }`}
+              >
+                ID
+              </button>
+              <button
+                onClick={() => handleLanguageChange('en')}
+                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
+                  language === 'en' ? 'bg-[#F5A201] text-white shadow-md' : 'text-[#013C58] hover:text-[#F5A201]'
+                }`}
+              >
+                EN
+              </button>
             </div>
-          </button>
+            
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={handleMenuToggle}
+              className="relative p-2 rounded-lg text-[#013C58] hover:bg-[#F5A201]/10 focus:outline-none focus:ring-2 focus:ring-[#F5A201] transition-colors duration-300"
+              aria-label="Toggle menu"
+            >
+              <div className="w-6 h-6">
+                <span className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${isMenuOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`}>
+                  <HiMenu size={24} />
+                </span>
+                <span className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'}`}>
+                  <HiX size={24} />
+                </span>
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu with Slide Animation */}
@@ -125,31 +148,6 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            
-            {/* Mobile Language Switcher */}
-            <div className="px-4 py-3 bg-[#013C58]/5 rounded-lg">
-              <div className="flex items-center space-x-3">
-                <HiGlobe className="text-[#013C58] text-xl" />
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={() => handleLanguageChange('id')}
-                    className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
-                      language === 'id' ? 'bg-[#F5A201] text-white shadow-md' : 'bg-white text-[#013C58] hover:bg-[#013C58]/5'
-                    }`}
-                  >
-                    Indonesia
-                  </button>
-                  <button
-                    onClick={() => handleLanguageChange('en')}
-                    className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
-                      language === 'en' ? 'bg-[#F5A201] text-white shadow-md' : 'bg-white text-[#013C58] hover:bg-[#013C58]/5'
-                    }`}
-                  >
-                    English
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
