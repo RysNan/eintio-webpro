@@ -46,7 +46,7 @@ const About = () => {
             </p>
           </div>
 
-          {/* Mission */}
+          {/* Mission card */}
           <div className="bg-white border-2 border-[#F5A201] p-8 md:p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 bg-[#F5A201] rounded-2xl flex items-center justify-center shrink-0">
