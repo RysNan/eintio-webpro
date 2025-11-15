@@ -7,7 +7,7 @@ interface MenuItem {
   href: string;
 }
 
-type Language = 'id' | 'en';
+type Language = 'en' | 'id';
 
 const Navbar = () => {
   const { content, setLanguage, language } = useLanguage();
@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-[#013C58]/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FEFEFE]/95 backdrop-blur-md shadow-md border-b border-[#250950]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main navigation bar */}
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -55,10 +55,10 @@ const Navbar = () => {
                 <li key={index}>
                   <a 
                     href={item.href}
-                    className="relative px-4 py-2 text-base font-semibold text-[#013C58] hover:text-[#F5A201] transition-colors duration-300 group"
+                    className="relative px-4 py-2 text-base font-semibold text-[#250950] hover:text-[#f66d9d] transition-colors duration-300 group"
                   >
                     {item.label}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#F5A201] group-hover:w-full transition-all duration-300"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#f66d9d] group-hover:w-full transition-all duration-300"></span>
                   </a>
                 </li>
               ))}
@@ -68,23 +68,23 @@ const Navbar = () => {
           {/* Desktop Language & CTA Section */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Language Switcher with Globe Icon */}
-            <div className="flex items-center space-x-2 px-3 py-2 bg-[#013C58]/5 rounded-full">
-              <HiGlobe className="text-[#013C58] text-lg" />
-              <button
-                onClick={() => handleLanguageChange('id')}
-                className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
-                  language === 'id' ? 'bg-[#F5A201] text-white shadow-md' : 'text-[#013C58] hover:text-[#F5A201]'
-                }`}
-              >
-                ID
-              </button>
+            <div className="flex items-center space-x-2 px-3 py-2 bg-[#F5F5F5] rounded-full">
+              <HiGlobe className="text-[#250950] text-lg" />
               <button
                 onClick={() => handleLanguageChange('en')}
                 className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
-                  language === 'en' ? 'bg-[#F5A201] text-white shadow-md' : 'text-[#013C58] hover:text-[#F5A201]'
+                  language === 'en' ? 'bg-[#f66d9d] text-[#FEFEFE] shadow-md' : 'text-[#250950] hover:text-[#f66d9d]'
                 }`}
               >
                 EN
+              </button>
+              <button
+                onClick={() => handleLanguageChange('id')}
+                className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
+                  language === 'id' ? 'bg-[#f66d9d] text-[#FEFEFE] shadow-md' : 'text-[#250950] hover:text-[#f66d9d]'
+                }`}
+              >
+                ID
               </button>
             </div>
           </div>
@@ -92,11 +92,11 @@ const Navbar = () => {
           {/* Mobile Language Switcher & Menu Button */}
           <div className="lg:hidden flex items-center gap-3">
             {/* Mobile Language Switcher */}
-            <div className="flex items-center gap-1 px-2 py-1 bg-[#013C58]/5 rounded-full">
+            <div className="flex items-center gap-1 px-2 py-1 bg-[#F5F5F5] rounded-full">
               <button
                 onClick={() => handleLanguageChange('id')}
                 className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
-                  language === 'id' ? 'bg-[#F5A201] text-white shadow-md' : 'text-[#013C58] hover:text-[#F5A201]'
+                  language === 'id' ? 'bg-[#f66d9d] text-[#FEFEFE] shadow-md' : 'text-[#250950] hover:text-[#f66d9jumbotrond]'
                 }`}
               >
                 ID
@@ -104,7 +104,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleLanguageChange('en')}
                 className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
-                  language === 'en' ? 'bg-[#F5A201] text-white shadow-md' : 'text-[#013C58] hover:text-[#F5A201]'
+                  language === 'en' ? 'bg-[#f66d9d] text-[#FEFEFE] shadow-md' : 'text-[#250950] hover:text-[#f66d9d]'
                 }`}
               >
                 EN
@@ -114,7 +114,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button 
               onClick={handleMenuToggle}
-              className="relative p-2 rounded-lg text-[#013C58] hover:bg-[#F5A201]/10 focus:outline-none focus:ring-2 focus:ring-[#F5A201] transition-colors duration-300"
+              className="relative p-2 rounded-lg text-[#250950] hover:bg-[#f66d9d]/10 focus:outline-none focus:ring-2 focus:ring-[#f66d9d] transition-colors duration-300"
               aria-label="Toggle menu"
             >
               <div className="w-6 h-6">
@@ -133,7 +133,7 @@ const Navbar = () => {
         <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="py-4 space-y-4 border-t border-[#013C58]/10">
+          <div className="py-4 space-y-4 border-t border-[#250950]/10">
             {/* Mobile Navigation Links */}
             <ul className="space-y-1">
               {menuItems.map((item, index) => (
@@ -141,7 +141,7 @@ const Navbar = () => {
                   <a 
                     href={item.href}
                     onClick={handleMenuItemClick}
-                    className="block px-4 py-3 text-lg font-semibold text-[#013C58] hover:bg-[#F5A201]/10 hover:text-[#F5A201] rounded-lg transition-all duration-300"
+                    className="block px-4 py-3 text-lg font-semibold text-[#250950] hover:bg-[#f66d9d]/10 hover:text-[#f66d9d] rounded-lg transition-all duration-300"
                   >
                     {item.label}
                   </a>

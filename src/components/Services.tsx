@@ -16,13 +16,13 @@ const iconMap: { [key in ServiceCategory['type']]: IconType } = {
 const Services = () => {
   const { content } = useLanguage();
   return (
-    <section id="services" className="w-full px-6 py-24 md:py-32 bg-[#013C58] text-white">
+    <section id="services" className="w-full px-6 py-24 md:py-32 bg-[#250950] text-[#FEFEFE]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-black mb-6">
             {content.services.title}
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-[#FEFEFE]/80 max-w-3xl mx-auto">
             {content.services.subtitle}
           </p>
         </div>
@@ -33,14 +33,14 @@ const Services = () => {
             return (
               <div 
                 key={index} 
-                className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-10 border border-white/10 hover:border-[#F5A201]/50 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
+                className="bg-[#FEFEFE]/5 backdrop-blur-sm rounded-3xl p-8 md:p-10 border border-[#FEFEFE]/10 hover:border-[#f66d9d]/50 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 bg-[#F5A201] rounded-2xl flex items-center justify-center shrink-0">
-                    <IconComponent className="text-3xl text-white" />
+                  <div className="w-16 h-16 bg-[#f66d9d] rounded-2xl flex items-center justify-center shrink-0">
+                    <IconComponent className="text-3xl text-[#FEFEFE]" />
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-black text-white">
+                  <h3 className="text-3xl md:text-4xl font-black text-[#FEFEFE]">
                     {category.title}
                   </h3>
                 </div>
@@ -55,12 +55,12 @@ const Services = () => {
                         className="flex items-start gap-3 group"
                       >
                         <FaCheckCircle className={`text-xl shrink-0 mt-0.5 transition-colors ${
-                          isInProgress ? 'text-white/30' : 'text-[#F5A201] group-hover:text-white'
+                          isInProgress ? 'text-[#FEFEFE]/30' : 'text-[#f66d9d] group-hover:text-[#FEFEFE]'
                         }`} />
                         <span className={`text-lg leading-relaxed transition-colors ${
                           isInProgress 
-                            ? 'text-white/50 italic' 
-                            : 'text-white/90 group-hover:text-white'
+                            ? 'text-[#FEFEFE]/50 italic' 
+                            : 'text-[#FEFEFE]/90 group-hover:text-[#FEFEFE]'
                         }`}>
                           {item}
                         </span>
