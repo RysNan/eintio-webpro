@@ -5,9 +5,9 @@ const id = {
     },
     "jumbotron": {
         "header": '/header.jpg',
-        "title": "Eintio",
+        "title": "EINTIO",
         "description": "Pendidikan dan Teknologi",
-        "brief": "Solusi terpercaya untuk transformasi digital dan pengembangan SDM di bidang teknologi informasi dan pendidikan"
+        "brief": "Solusi terpercaya untuk transformasi digital dan pengembangan SDM di bidang teknologi informasi dan pendidikan."
     },
     "about": {
         "title": "Tentang Perusahaan",
@@ -63,10 +63,10 @@ const id = {
                     "title": "Development",
                     "name": "Panji",
                     "subdivisions": [
-                        { "title": "Website", "name": "Jojo" },
-                        { "title": "Aplikasi", "name": "Nathan" },
-                        { "title": "Game", "name": "-" },
-                        { "title": "Desain", "name": "-" }
+                        { "title": "Website", "name": "Krisnando" },
+                        { "title": "Aplikasi", "name": "Panji" },
+                        { "title": "Game", "name": "James" },
+                        { "title": "Desain", "name": "Andre" }
                     ]
                 },
                 "main": [

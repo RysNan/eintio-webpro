@@ -5,9 +5,9 @@ const en = {
     },
     "jumbotron": {
         "header": '/header.jpg',
-        "title": "Eintio",
+        "title": "EINTIO",
         "description": "Academic and Technology",
-        "brief": "Trusted solutions for digital transformation and human resource development in information technology and education"
+        "brief": "Trusted solutions for digital transformation and human resource development in information technology and education."
     },
     "about": {
         "title": "About Company",
@@ -63,10 +63,10 @@ const en = {
                     "title": "Development",
                     "name": "Panji",
                     "subdivisions": [
-                        { "title": "Website", "name": "Jojo" },
-                        { "title": "Application", "name": "Nathan" },
-                        { "title": "Game", "name": "-" },
-                        { "title": "Design", "name": "-" }
+                        { "title": "Website", "name": "Krisnando" },
+                        { "title": "Application", "name": "Panji" },
+                        { "title": "Game", "name": "James" },
+                        { "title": "Design", "name": "Andre" }
                     ]
                 },
                 "main": [
@@ -76,7 +76,7 @@ const en = {
                     { "title": "Development", "name": "Panji" },
                     { "title": "Academic", "name": "-" },
                     { "title": "Animation", "name": "-" },
-                    { "title": "Commercial/Social Media", "name": "Yudho" }
+                    { "title": "Commercial/Social Media", "name": "-" }
                 ]
             }
         }
