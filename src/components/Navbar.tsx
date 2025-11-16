@@ -39,14 +39,16 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main navigation bar */}
         <div className="relative flex items-center justify-between h-16 md:h-20">
-          {/* Logo Section */}
-          <div className="shrink-0 flex items-center">
+          <a href="#home" className="shrink-0 flex items-center group">
             <img 
               src={content.navbar.logo} 
               alt="Company Logo"
-              className="h-13 md:h-15 w-auto object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
+              className="h-13 md:h-15 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
-          </div>
+            <span className="ml-3 text-2xl font-bold text-[#250950] group-hover:text-[#f66d9d] transition-colors duration-300">
+              EINTIO
+            </span>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
