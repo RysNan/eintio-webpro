@@ -44,7 +44,7 @@ const Navbar = () => {
             <img 
               src={content.navbar.logo} 
               alt="Company Logo"
-              className="h-8 md:h-10 w-auto object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
+              className="h-13 md:h-15 w-auto object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
             />
           </div>
 
@@ -72,7 +72,7 @@ const Navbar = () => {
               <HiGlobe className="text-[#250950] text-lg" />
               <button
                 onClick={() => handleLanguageChange('en')}
-                className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
+                className={`px-3 py-1 text-sm font-semibold rounded-full transition-all duration-300 ${
                   language === 'en' ? 'bg-[#f66d9d] text-[#FEFEFE] shadow-md' : 'text-[#250950] hover:text-[#f66d9d]'
                 }`}
               >
@@ -80,7 +80,7 @@ const Navbar = () => {
               </button>
               <button
                 onClick={() => handleLanguageChange('id')}
-                className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
+                className={`px-3 py-1 text-sm font-semibold rounded-full transition-all duration-300 ${
                   language === 'id' ? 'bg-[#f66d9d] text-[#FEFEFE] shadow-md' : 'text-[#250950] hover:text-[#f66d9d]'
                 }`}
               >
@@ -95,7 +95,7 @@ const Navbar = () => {
             <div className="flex items-center gap-1 px-2 py-1 bg-[#F5F5F5] rounded-full">
               <button
                 onClick={() => handleLanguageChange('id')}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
+                className={`px-2.5 py-1 text-sm font-semibold rounded-full transition-all duration-300 ${
                   language === 'id' ? 'bg-[#f66d9d] text-[#FEFEFE] shadow-md' : 'text-[#250950] hover:text-[#f66d9jumbotrond]'
                 }`}
               >
@@ -103,7 +103,7 @@ const Navbar = () => {
               </button>
               <button
                 onClick={() => handleLanguageChange('en')}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all duration-300 ${
+                className={`px-2.5 py-1 text-sm font-semibold rounded-full transition-all duration-300 ${
                   language === 'en' ? 'bg-[#f66d9d] text-[#FEFEFE] shadow-md' : 'text-[#250950] hover:text-[#f66d9d]'
                 }`}
               >

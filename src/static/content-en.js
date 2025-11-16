@@ -92,7 +92,7 @@ const en = {
                     "Teaching in IT/IS/Digital Business",
                     "Teaching coding classes",
                     "Undergraduate thesis assistance",
-                    "Thesis / Dissertation assistance",
+                    "corporate trainer assistance",
                     "Assistance in writing papers for journals"
                 ]
             },

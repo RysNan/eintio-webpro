@@ -17,16 +17,16 @@ const socialIconMap: { [key in SocialLink['type']]: IconType } = {
 const Footer = () => {
   const { content } = useLanguage();
   return (
-    <footer className="w-full bg-[#250950] text-[#FEFEFE] px-6 py-16">
+    <footer className="w-full bg-[#250950] text-[#FEFEFE] px-6 py-12">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <img src={content.navbar.logo} alt="logo" className="h-10 mb-6 brightness-0 invert" />
+            <img src={content.navbar.logo} alt="logo" className="h-10 mb-4 brightness-0 invert" />
             <p className="text-[#FEFEFE]/70 text-lg leading-relaxed">{content.footer.description}</p>
           </div>
           <div>
-            <h3 className="font-bold text-2xl mb-6">{content.footer.quickLinks.title}</h3>
-            <ul className="space-y-3">
+            <h3 className="font-bold text-2xl mb-4">{content.footer.quickLinks.title}</h3>
+            <ul className="space-y-2">
               {content.footer.quickLinks.links.map((link: string, index: number) => (
                 <li key={index}>
                   <a href="#" className="text-[#FEFEFE]/70 hover:text-[#f66d9d] transition-colors text-lg">
@@ -37,8 +37,8 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-2xl mb-6">{content.footer.services.title}</h3>
-            <ul className="space-y-3">
+            <h3 className="font-bold text-2xl mb-4">{content.footer.services.title}</h3>
+            <ul className="space-y-2">
               {content.footer.services.items.map((service: string, index: number) => (
                 <li key={index}>
                   <a href="#" className="text-[#FEFEFE]/70 hover:text-[#f66d9d] transition-colors text-lg">
@@ -49,7 +49,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-2xl mb-6">{content.footer.social.title}</h3>
+            <h3 className="font-bold text-2xl mb-4">{content.footer.social.title}</h3>
             <div className="flex gap-4">
               {content.footer.social.links.map((social: SocialLink, index: number) => {
                 const IconComponent = socialIconMap[social.type];
@@ -66,7 +66,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t border-[#FEFEFE]/10 pt-8 text-center">
+        <div className="border-t border-[#FEFEFE]/10 pt-6 text-center">
           <p className="text-[#FEFEFE]/70 text-lg">{content.footer.copyright}</p>
         </div>
       </div>

@@ -10,21 +10,21 @@ const StyledNode = styled.div<StyledNodeProps>`
   padding: 12px 16px;
   border-radius: 8px;
   display: inline-block;
-  border: 2px solid ${(props: StyledNodeProps) => props.highlight ? 'rgba(246, 109, 157, 0.4)' : 'rgba(84, 66, 142, 0.2)'};
-  background-color: #FEFEFE;
+  border: 2px solid ${(props: StyledNodeProps) => props.highlight ? 'rgba(245, 162, 1, 0.4)' : 'rgba(1, 60, 88, 0.2)'};
+  background-color: white;
   transition: all 0.3s ease;
   min-width: 140px;
   text-align: center;
   
   &:hover {
-    border-color: #f66d9d;
+    border-color: #F5A201;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 `;
 
 const StyledTitle = styled.div`
   font-size: 10px;
-  color: rgba(84, 66, 142, 0.6);
+  color: rgba(1, 60, 88, 0.6);
   font-weight: 600;
   margin-bottom: 4px;
   text-transform: uppercase;
@@ -33,7 +33,7 @@ const StyledTitle = styled.div`
 
 const StyledName = styled.div`
   font-size: 14px;
-  color: #250950;
+  color: #013C58;
   font-weight: 700;
 `;
 
@@ -53,7 +53,7 @@ const OrganizationalChart = () => {
       <div className="inline-block min-w-full">
         <Tree
           lineWidth="2px"
-          lineColor="rgba(84, 66, 142, 0.3)"
+          lineColor="rgba(1, 60, 88, 0.3)"
           lineBorderRadius="8px"
           label={<OrgCard title={orgData.director.title} name={orgData.director.name} />}
         >
