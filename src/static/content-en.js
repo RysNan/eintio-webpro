@@ -105,8 +105,8 @@ const en = {
                     "Game",
                     "Social Media (Live IG/Facebook/Tiktok)",
                     "Designing/Editing Photo-Video/Drone",
-                    "Animation (In Progress)",
-                    "Caricature (In Progress)",
+                    "Animation",
+                    "Caricature",
                     "Cyber Security (In Progress)"
                 ]
             }
