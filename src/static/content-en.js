@@ -74,7 +74,7 @@ const en = {
                     { "title": "Legal", "name": "-" },
                     { "title": "HRD/SDM", "name": "-" },
                     { "title": "Development", "name": "Panji" },
-                    { "title": "Academic", "name": "-" },
+                    { "title": "Academic", "name": "Aurel" },
                     { "title": "Animation", "name": "-" },
                     { "title": "Commercial/Social Media", "name": "-" }
                 ]
@@ -92,7 +92,7 @@ const en = {
                     "Teaching in IT/IS/Digital Business",
                     "Teaching coding classes",
                     "Undergraduate thesis assistance",
-                    "corporate trainer assistance",
+                    "Corporate trainer assistance",
                     "Assistance in writing papers for journals"
                 ]
             },

@@ -74,7 +74,7 @@ const id = {
                     { "title": "Hukum", "name": "-" },
                     { "title": "HRD/SDM", "name": "-" },
                     { "title": "Development", "name": "Panji" },
-                    { "title": "Akademik", "name": "-" },
+                    { "title": "Akademik", "name": "Aurel" },
                     { "title": "Animasi", "name": "-" },
                     { "title": "Komersial/Medsos", "name": "Yudho" }
                 ]
