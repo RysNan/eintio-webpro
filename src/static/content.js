@@ -12,8 +12,10 @@ const id = {
     "about": {
         "title": "Tentang Perusahaan",
         "subtitle": "Kami adalah perusahaan yang berfokus pada inovasi pendidikan dan teknologi untuk masa depan yang lebih baik",
-        "organizationTitle": "Struktur Organisasi",
-        "organizationSubtitle": "Struktur tim dan kepemimpinan kami",
+        
+        "organizationTitle": "Pimpinan", 
+        "organizationSubtitle": "Pimpinan yang mengarahkan visi dan strategi kami",
+        
         "vision": {
             "title": "Visi",
             "description": "Menjadi mitra terpercaya dalam transformasi digital dan pengembangan sumber daya manusia di bidang teknologi informasi dan pendidikan, dengan berkomitmen untuk menciptakan solusi inovatif yang memberdayakan individu dan organisasi dalam menghadapi tantangan era digital."
@@ -47,70 +49,64 @@ const id = {
         ],
         "organization": {
             "director": {
-                "title": "Direktur",
-                "name": "Bu Dina"
-            },
-            "viceDirector": {
-                "title": "Wakil Direktur",
-                "name": "-"
-            },
-            "secretary": {
-                "title": "Sekretaris",
-                "name": "Berlian"
-            },
-            "departments": {
-                "development": {
-                    "title": "Development",
-                    "name": "Panji",
-                    "subdivisions": [
-                        { "title": "Website", "name": "Krisnando" },
-                        { "title": "Aplikasi", "name": "Panji" },
-                        { "title": "Game", "name": "James" },
-                        { "title": "Desain", "name": "Andre" }
-                    ]
-                },
-                "main": [
-                    { "title": "Finance", "name": "-" },
-                    { "title": "Hukum", "name": "-" },
-                    { "title": "HRD/SDM", "name": "-" },
-                    { "title": "Development", "name": "Panji" },
-                    { "title": "Akademik", "name": "Aurel" },
-                    { "title": "Animasi", "name": "-" },
-                    { "title": "Komersial/Medsos", "name": "Yudho" }
-                ]
+                "title": "Direktur Utama (CEO)",
+                "name": "Bu Dina",
+                "quote": "Dina Robiana Sitompul adalah CEO visioner dari PT Entio Academic & Teknologi yang memanfaatkan latar belakang kuatnya di bidang Teknik Informatika dan Bisnis Digital untuk mendorong inovasi di sektor teknologi pendidikan. Sebagai pemimpin yang berkomitmen menjembatani kesenjangan antara teori akademis dan aplikasi industri, ia mengarahkan perusahaan dalam mengembangkan solusi perangkat lunak yang tangguh dan berpusat pada pengguna, guna mengakselerasi kematangan digital serta memberdayakan institusi dan pelajar untuk mencapai potensi terbaik mereka."
             }
         }
     },
     "services": {
         "title": "Layanan Kami",
         "subtitle": "Solusi lengkap untuk kebutuhan pendidikan dan teknologi Anda",
-        "categories": [
-            {
-                "type": "academic",
-                "title": "Akademik",
-                "items": [
-                    "Mengajar di IT/IS/Digital Business",
-                    "Mengajar kelas coding",
-                    "Bantuan skripsi sarjana",
-                    "Bantuan tesis / disertasi",
-                    "Bantuan penulisan paper untuk jurnal"
-                ]
-            },
-            {
-                "type": "technology",
-                "title": "Teknologi",
-                "items": [
-                    "Website",
-                    "Aplikasi",
-                    "Game",
-                    "Social Media (Live IG/Facebook/Tiktok)",
-                    "Desain/Editing Foto-Video/Drone",
-                    "Animasi (Dalam Pengembangan)",
-                    "Karikatur (Dalam Pengembangan)",
-                    "Keamanan Siber (Dalam Pengembangan)"
-                ]
-            }
-        ]
+        "academic": {
+            "title": "Akademik",
+            "description": "Membantu mahasiswa dan akademisi mencapai potensi terbaik melalui bimbingan intensif, konsultasi tugas akhir, dan pelatihan skill digital.",
+            "items": [
+                "Pengajaran IT/IS/Digital Business",
+                "Kelas Coding & Pemrograman",
+                "Bimbingan Skripsi & Tugas Akhir",
+                "Konsultasi Tesis / Disertasi",
+                "Publikasi Jurnal Ilmiah"
+            ]
+        },
+        "technology": {
+            "title": "Teknologi",
+            "divisions": [
+                {
+                    "id": "web",
+                    "title": "Divisi Website",
+                    "description": "Pengembangan solusi web modern, responsif, dan aman untuk bisnis Anda.",
+                    "items": [
+                        "Website Company Profile",
+                        "Sistem Informasi Manajemen",
+                        "E-Commerce & Landing Page",
+                        "Keamanan Siber (Dalam Pengembangan)"
+                    ]
+                },
+                {
+                    "id": "game",
+                    "title": "Divisi Game",
+                    "description": "Menciptakan pengalaman interaktif yang imersif dan menghibur.",
+                    "items": [
+                        "Pengembangan Game 2D/3D",
+                        "Media Pembelajaran Interaktif",
+                        "Aset Game & Level Design",
+                        "Animasi (Dalam Pengembangan)"
+                    ]
+                },
+                {
+                    "id": "app",
+                    "title": "Divisi Aplikasi",
+                    "description": "Solusi perangkat lunak mobile dan desktop untuk produktivitas tinggi.",
+                    "items": [
+                        "Pengembangan Aplikasi Mobile",
+                        "Aplikasi Desktop Custom",
+                        "UI/UX Design",
+                        "Social Media Management"
+                    ]
+                }
+            ]
+        }
     },
     "projects": {
         "title": "Proyek Kami",
@@ -196,7 +192,7 @@ const id = {
             {
                 "type": "phone",
                 "title": "Telepon",
-                "value": "+62 55 5555 5555"
+                "value": "+62 81122225804"
             },
             {
                 "type": "hours",
@@ -218,9 +214,9 @@ const id = {
         "social": {
             "title": "Media Sosial",
             "links": [
-                { "type": "facebook", "url": "https://www.facebook.com/share/1JkpJd4gZu/" },
+                { "type": "facebook", "url": "https://web.facebook.com/profile.php?id=61583125063405" },
                 { "type": "twitter", "url": "https://x.com/eintio_id" },
-                { "type": "instagram", "url": "https://www.instagram.com/eintio.id" },
+                { "type": "instagram", "url": "https://www.instagram.com/eintio.id/?hl=en" },
                 { "type": "linkedin", "url": "https://www.linkedin.com/in/eintio-id-083902390/" }
             ]
         },

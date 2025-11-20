@@ -55,78 +55,90 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full px-6 py-24 md:py-32 bg-[#F5F5F5]">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-black mb-6 text-[#250950]">
+    <section id="contact" className="w-full px-6 py-20 md:py-28 bg-[#F5F5F5]">
+      <div className="max-w-6xl mx-auto">
+        
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-black mb-5 text-[#250950]">
             {content.contact.title}
           </h2>
-          <p className="text-xl text-[#54428e]/70 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-[#54428e]/70 max-w-2xl mx-auto">
             {content.contact.subtitle}
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder={content.contact.form.name}
-                  className="w-full px-6 py-4 border-2 border-[#54428e]/20 rounded-2xl focus:outline-none focus:border-[#f66d9d] transition-colors text-lg bg-[#FEFEFE]"
-                  required
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder={content.contact.form.email}
-                  className="w-full px-6 py-4 border-2 border-[#54428e]/20 rounded-2xl focus:outline-none focus:border-[#f66d9d] transition-colors text-lg bg-[#FEFEFE]"
-                  required
-                />
-              </div>
-              <div>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder={content.contact.form.message}
-                  rows={6}
-                  className="w-full px-6 py-4 border-2 border-[#54428e]/20 rounded-2xl focus:outline-none focus:border-[#f66d9d] transition-colors resize-none text-lg bg-[#FEFEFE]"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-[#f66d9d] hover:bg-[#54428e] text-[#FEFEFE] font-bold py-5 px-8 rounded-2xl transition-all duration-300 text-lg shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
-              >
-                <FaWhatsapp className="text-2xl" />
-                {content.contact.form.submit}
-              </button>
-            </form>
-          </div>
-          <div className="lg:col-span-2 space-y-6">
-            {content.contact.info.map((item: ContactInfo, index: number) => {
-              const IconComponent = iconMap[item.type];
-              return (
-                <div key={index} className="flex items-start gap-5">
-                  <div className="w-14 h-14 bg-[#f66d9d] rounded-2xl flex items-center justify-center shrink-0 shadow-md">
-                    <IconComponent className="text-2xl text-[#FEFEFE]" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-[#250950] mb-2 text-lg">{item.title}</h3>
-                    <p className="text-[#54428e]/70 text-lg">{item.value}</p>
-                  </div>
+
+        {/* Card Container with balanced padding */}
+        <div className="bg-[#FEFEFE] rounded-[2.5rem] shadow-xl p-8 md:p-12 overflow-hidden">
+          {/* Restored the 3:2 grid split for better use of space */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+            
+            {/* Form Section (Takes 3 columns) */}
+            <div className="lg:col-span-3 space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder={content.contact.form.name}
+                    // Comfortable padding
+                    className="w-full px-6 py-4 border-2 border-[#54428e]/20 rounded-2xl focus:outline-none focus:border-[#f66d9d] transition-colors text-lg bg-white"
+                    required
+                  />
                 </div>
-              );
-            })}
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder={content.contact.form.email}
+                    className="w-full px-6 py-4 border-2 border-[#54428e]/20 rounded-2xl focus:outline-none focus:border-[#f66d9d] transition-colors text-lg bg-white"
+                    required
+                  />
+                </div>
+                <div>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder={content.contact.form.message}
+                    rows={5}
+                    className="w-full px-6 py-4 border-2 border-[#54428e]/20 rounded-2xl focus:outline-none focus:border-[#f66d9d] transition-colors resize-none text-lg bg-white"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-[#f66d9d] hover:bg-[#54428e] text-[#FEFEFE] font-bold py-4 px-8 rounded-2xl transition-all duration-300 text-lg shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
+                >
+                  <FaWhatsapp className="text-2xl" />
+                  {content.contact.form.submit}
+                </button>
+              </form>
+            </div>
+
+            {/* Info Section (Takes 2 columns) */}
+            <div className="lg:col-span-2 space-y-8 flex flex-col justify-center lg:pl-8 lg:border-l lg:border-[#54428e]/10">
+              {content.contact.info.map((item: ContactInfo, index: number) => {
+                const IconComponent = iconMap[item.type];
+                return (
+                  <div key={index} className="flex items-start gap-5">
+                    <div className="w-12 h-12 bg-[#f66d9d]/10 rounded-xl flex items-center justify-center shrink-0">
+                      <IconComponent className="text-xl text-[#f66d9d]" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-[#250950] mb-1 text-lg">{item.title}</h3>
+                      <p className="text-[#54428e]/80 text-lg leading-relaxed">{item.value}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );

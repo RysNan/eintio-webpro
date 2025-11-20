@@ -12,8 +12,10 @@ const en = {
     "about": {
         "title": "About Company",
         "subtitle": "We are a company focused on educational and technological innovation for a better future",
-        "organizationTitle": "Organizational Structure",
-        "organizationSubtitle": "Our team structure and leadership",
+
+        "organizationTitle": "Leadership",
+        "organizationSubtitle": "Guiding our vision and strategy",
+        
         "vision": {
             "title": "Vision",
             "description": "To be a trusted partner in digital transformation and human resource development in information technology and education, committed to creating innovative solutions that empower individuals and organizations to face the challenges of the digital era."
@@ -47,70 +49,64 @@ const en = {
         ],
         "organization": {
             "director": {
-                "title": "Director",
-                "name": "Bu Dina"
-            },
-            "viceDirector": {
-                "title": "Vice Director",
-                "name": "-"
-            },
-            "secretary": {
-                "title": "Secretary",
-                "name": "Berlian"
-            },
-            "departments": {
-                "development": {
-                    "title": "Development",
-                    "name": "Panji",
-                    "subdivisions": [
-                        { "title": "Website", "name": "Krisnando" },
-                        { "title": "Application", "name": "Panji" },
-                        { "title": "Game", "name": "James" },
-                        { "title": "Design", "name": "Andre" }
-                    ]
-                },
-                "main": [
-                    { "title": "Finance", "name": "-" },
-                    { "title": "Legal", "name": "-" },
-                    { "title": "HRD/SDM", "name": "-" },
-                    { "title": "Development", "name": "Panji" },
-                    { "title": "Academic", "name": "Aurel" },
-                    { "title": "Animation", "name": "-" },
-                    { "title": "Commercial/Social Media", "name": "-" }
-                ]
+                "title": "Chief Executive Officer (CEO)",
+                "name": "Ms. Dina",
+                "quote": "Dina Robiana Sitompul is the visionary CEO of PT Entio Academic & Teknologi, where she leverages her strong background in Informatics Engineering and Digital Business to drive innovation in the educational technology sector. As a leader committed to bridging the gap between academic theory and industrial application, she guides the company in developing robust, user-centric software solutions that accelerate digital maturity and empower both institutions and learners to reach their full potential."
             }
         }
     },
     "services": {
         "title": "Our Services",
         "subtitle": "Complete solutions for your education and technology needs",
-        "categories": [
-            {
-                "type": "academic",
-                "title": "Academic",
-                "items": [
-                    "Teaching in IT/IS/Digital Business",
-                    "Teaching coding classes",
-                    "Undergraduate thesis assistance",
-                    "Corporate trainer assistance",
-                    "Assistance in writing papers for journals"
-                ]
-            },
-            {
-                "type": "technology",
-                "title": "Technology",
-                "items": [
-                    "Website",
-                    "Application",
-                    "Game",
-                    "Social Media (Live IG/Facebook/Tiktok)",
-                    "Designing/Editing Photo-Video/Drone",
-                    "Animation",
-                    "Caricature",
-                    "Cyber Security (In Progress)"
-                ]
-            }
-        ]
+        "academic": {
+            "title": "Academic",
+            "description": "Helping students and academics reach their full potential through intensive mentoring, thesis consultation, and digital skill training.",
+            "items": [
+                "Teaching in IT/IS/Digital Business",
+                "Coding & Programming Classes",
+                "Undergraduate Thesis Assistance",
+                "Thesis / Dissertation Consultation",
+                "Scientific Journal Publication"
+            ]
+        },
+        "technology": {
+            "title": "Technology",
+            "divisions": [
+                {
+                    "id": "web",
+                    "title": "Website Division",
+                    "description": "Developing modern, responsive, and secure web solutions for your business.",
+                    "items": [
+                        "Corporate Website Profile",
+                        "Management Information Systems",
+                        "E-Commerce & Landing Page",
+                        "Cyber Security (Coming Soon)"
+                    ]
+                },
+                {
+                    "id": "game",
+                    "title": "Game Division",
+                    "description": "Creating immersive and entertaining interactive experiences.",
+                    "items": [
+                        "2D/3D Game Development",
+                        "Interactive Learning Media",
+                        "Game Assets & Level Design",
+                        "Animation (Coming Soon)"
+                    ]
+                },
+                {
+                    "id": "app",
+                    "title": "Application Division",
+                    "description": "Mobile and desktop software solutions for high productivity.",
+                    "items": [
+                        "Mobile App Development",
+                        "Custom Desktop Applications",
+                        "UI/UX Design",
+                        "Social Media Management"
+                    ]
+                }
+            ]
+        }
     },
     "projects": {
         "title": "Our Projects",
@@ -196,7 +192,7 @@ const en = {
             {
                 "type": "phone",
                 "title": "Phone",
-                "value": "+62 55 5555 5555"
+                "value": "+62 81122225804"
             },
             {
                 "type": "hours",
@@ -218,9 +214,9 @@ const en = {
         "social": {
             "title": "Social Media",
             "links": [
-                { "type": "facebook", "url": "https://www.facebook.com/share/1JkpJd4gZu/" },
+                { "type": "facebook", "url": "https://web.facebook.com/profile.php?id=61583125063405" },
                 { "type": "twitter", "url": "https://x.com/eintio_id" },
-                { "type": "instagram", "url": "https://www.instagram.com/eintio.id" },
+                { "type": "instagram", "url": "https://www.instagram.com/eintio.id/?hl=en" },
                 { "type": "linkedin", "url": "https://www.linkedin.com/in/eintio-id-083902390/" }
             ]
         },

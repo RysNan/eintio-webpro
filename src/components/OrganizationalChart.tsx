@@ -1,81 +1,56 @@
 import { useLanguage } from '../context/LanguageContext';
-import { Tree, TreeNode } from 'react-organizational-chart';
-import styled from '@emotion/styled';
-
-interface StyledNodeProps {
-  highlight?: boolean;
-}
-
-const StyledNode = styled.div<StyledNodeProps>`
-  padding: 12px 16px;
-  border-radius: 8px;
-  display: inline-block;
-  border: 2px solid ${(props: StyledNodeProps) => props.highlight ? 'rgba(245, 162, 1, 0.4)' : 'rgba(1, 60, 88, 0.2)'};
-  background-color: white;
-  transition: all 0.3s ease;
-  min-width: 140px;
-  text-align: center;
-  
-  &:hover {
-    border-color: #F5A201;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  }
-`;
-
-const StyledTitle = styled.div`
-  font-size: 10px;
-  color: rgba(1, 60, 88, 0.6);
-  font-weight: 600;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-`;
-
-const StyledName = styled.div`
-  font-size: 14px;
-  color: #013C58;
-  font-weight: 700;
-`;
+import { FaQuoteLeft } from 'react-icons/fa';
 
 const OrganizationalChart = () => {
   const { content } = useLanguage();
-  const orgData = content.about.organization;
-
-  const OrgCard = ({ title, name, highlight = false }: { title: string; name: string; highlight?: boolean }) => (
-    <StyledNode highlight={highlight}>
-      <StyledTitle>{title}</StyledTitle>
-      <StyledName>{name}</StyledName>
-    </StyledNode>
-  );
+  const ceoData = content.about.organization.director;
 
   return (
-    <div className="w-full overflow-x-auto pb-8">
-      <div className="inline-block min-w-full">
-        <Tree
-          lineWidth="2px"
-          lineColor="rgba(1, 60, 88, 0.3)"
-          lineBorderRadius="8px"
-          label={<OrgCard title={orgData.director.title} name={orgData.director.name} />}
-        >
-          <TreeNode label={<OrgCard title={orgData.viceDirector.title} name={orgData.viceDirector.name} />} />
+    <div className="w-full">
+      <div className="group relative bg-white/80 backdrop-blur-sm border border-[#54428e]/20 p-8 md:p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 w-full">
+    
+        <div className="absolute inset-0 bg-gradient-to-r from-[#54428e]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2.5rem]" />
+
+        <div className="relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
           
-          <TreeNode label={<OrgCard title={orgData.secretary.title} name={orgData.secretary.name} />}>
-            {orgData.departments.main.map((dept: any, index: number) => {
-              const isDevDept = dept.title === "Development";
-              
-              return (
-                <TreeNode key={index} label={<OrgCard title={dept.title} name={dept.name} />}>
-                  {isDevDept && orgData.departments.development.subdivisions.map((sub: any, subIndex: number) => (
-                    <TreeNode 
-                      key={subIndex} 
-                      label={<OrgCard title={sub.title} name={sub.name} highlight={true} />} 
-                    />
-                  ))}
-                </TreeNode>
-              );
-            })}
-          </TreeNode>
-        </Tree>
+          {/* --- Bagian Foto --- */}
+          <div className="relative shrink-0">
+            {/* Container Foto Lingkaran */}
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full p-2 border-2 border-[#f66d9d] bg-white shadow-lg group-hover:scale-105 transition-transform duration-500">
+              <img 
+                src="/ceo.svg" 
+                alt={ceoData.name}
+                className="w-full h-full object-cover rounded-full bg-gray-50"
+              />
+            </div>
+            
+            {/* Badge CEO */}
+            <div className="absolute bottom-4 right-0 md:right-4 bg-[#250950] text-white text-sm font-bold px-5 py-2 rounded-full border-4 border-white shadow-md transform rotate-[-5deg] group-hover:rotate-0 transition-transform duration-300">
+              CEO
+            </div>
+          </div>
+
+          {/* --- Bagian Teks --- */}
+          <div className="text-center md:text-left flex-1">
+            <div className="mb-8 border-b border-[#54428e]/10 pb-6">
+              <h3 className="text-4xl md:text-5xl font-black text-[#250950] mb-2 tracking-tight">
+                {ceoData.name}
+              </h3>
+              <p className="text-[#f66d9d] font-bold uppercase tracking-[0.2em] text-sm md:text-base">
+                {ceoData.title}
+              </p>
+            </div>
+            
+            <div className="relative">
+        
+              <FaQuoteLeft className="text-5xl text-[#54428e]/10 absolute -top-8 -left-4 md:-left-10" />
+          
+              <p className="text-xl md:text-2xl text-[#54428e] leading-relaxed font-medium italic relative z-10">
+                 "{ceoData.quote}"
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

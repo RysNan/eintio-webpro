@@ -1,7 +1,7 @@
 import { useLanguage } from "../context/LanguageContext";
 import { FaLightbulb, FaHandshake, FaEye, FaFlag, FaStar, FaCheckCircle } from 'react-icons/fa';
 import type { IconType } from "react-icons";
-import OrganizationalChart from "./OrganizationalChart";
+import OrganizationalChart from "./OrganizationalChart"; // Komponen Profile CEO
 
 interface AboutValue {
   type: 'innovation' | 'quality' | 'collaboration';
@@ -35,7 +35,6 @@ const About = () => {
           <p className="text-xl text-[#54428e]/80 max-w-3xl mx-auto font-medium">
             {content.about.subtitle}
           </p>
-          {/* Garis hiasan di bawah Judul Utama tetap ada (opsional, kalau mau dihapus juga kabari) */}
           <div className="w-24 h-2 bg-gradient-to-r from-[#54428e] to-[#f66d9d] mx-auto mt-8 rounded-full" />
         </div>
 
@@ -43,8 +42,7 @@ const About = () => {
         <div className="flex flex-col gap-12 mb-24">
           
           {/* Vision Card */}
-          <div className="group relative bg-white/80 backdrop-blur-sm border border-[#54428e]/20 p-8 md:p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-            {/* Glow Effect */}
+          <div className="group relative bg-white/80 backdrop-blur-sm border border-[#54428e]/20 p-8 md:p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 w-full">
             <div className="absolute inset-0 bg-gradient-to-r from-[#54428e]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2.5rem]" />
             
             <div className="relative flex flex-col md:flex-row md:items-center gap-6 mb-6">
@@ -58,14 +56,13 @@ const About = () => {
                 </h3>
               </div>
             </div>
-            {/* UPDATE: Menghapus border-l-4 di sini agar tidak ada garis di samping/bawah area logo */}
             <p className="text-lg md:text-xl leading-relaxed text-[#54428e] pl-0 md:pl-26">
               {content.about.vision.description}
             </p>
           </div>
 
           {/* Mission Card */}
-          <div className="group relative bg-white/80 backdrop-blur-sm border border-[#f66d9d]/20 p-8 md:p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+          <div className="group relative bg-white/80 backdrop-blur-sm border border-[#f66d9d]/20 p-8 md:p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 w-full">
              <div className="absolute inset-0 bg-gradient-to-r from-[#f66d9d]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2.5rem]" />
 
             <div className="relative flex flex-col md:flex-row md:items-center gap-6 mb-6">
@@ -96,11 +93,11 @@ const About = () => {
         </div>
 
         {/* Values Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-28 w-full">
           {content.about.values.map((value: AboutValue, index: number) => {
             const IconComponent = iconMap[value.type];
             return (
-              <div key={index} className="relative bg-white p-8 rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 group overflow-hidden">
+              <div key={index} className="relative bg-white p-8 rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 group overflow-hidden w-full">
                 <div className="absolute -right-10 -top-10 w-32 h-32 bg-gradient-to-br from-[#f66d9d] to-[#54428e] opacity-10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500" />
                 
                 <div className="relative z-10">
@@ -119,21 +116,21 @@ const About = () => {
           })}
         </div>
 
-        {/* Organizational Structure */}
-        <div className="mt-20">
-          <div className="text-center mb-12">
+        {/* --- CEO PROFILE SECTION --- */}
+        <div className="mt-20 w-full">
+          <div className="text-center mb-16">
             <h3 className="text-4xl md:text-5xl font-black text-[#250950] mb-4">
-              {content.about.organizationTitle || 'Organizational Structure'}
+              Leadership
             </h3>
             <p className="text-lg text-[#54428e]/70">
-              {content.about.organizationSubtitle || 'Our team structure and leadership'}
+              Guiding our vision and strategy
             </p>
           </div>
-          <div className="p-1 rounded-[2rem] bg-gradient-to-br from-[#54428e] via-[#f66d9d] to-[#a18dda]">
-            <div className="bg-[#FEFEFE] rounded-[1.9rem] p-4 md:p-8 overflow-hidden">
-              <OrganizationalChart />
-            </div>
+          
+          <div className="w-full flex justify-center">
+             <OrganizationalChart />
           </div>
+          
         </div>
       </div>
     </section>
