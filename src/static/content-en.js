@@ -62,7 +62,7 @@ const en = {
             "title": "Academic",
             "description": "Helping students and academics reach their full potential through intensive mentoring, thesis consultation, and digital skill training.",
             "items": [
-                "Teaching in IT/IS/Digital Business",
+                "Corporate Trainer IT/IS/Digital Business",
                 "Coding & Programming Classes",
                 "Undergraduate Thesis Assistance",
                 "Thesis / Dissertation Consultation",
@@ -103,6 +103,19 @@ const en = {
                         "Custom Desktop Applications",
                         "UI/UX Design",
                         "Social Media Management"
+                    ]
+                },
+                {
+                    "id": "design",
+                    "title": "Design & Animation Division",
+                    "description": "Creative visual solutions, motion graphics, and high-quality animation.",
+                    "items": [
+                        "Animation For Businesses",
+                        "Animation For Students",
+                        "Animation For Content Creators",
+                        "Custom Motion Graphics",
+                        "Video Animation",
+                        "Anime Design"
                     ]
                 }
             ]

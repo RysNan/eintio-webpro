@@ -6,21 +6,25 @@ import {
   FaMobileAlt, 
   FaCheckCircle, 
   FaClock, 
-  FaCode 
+  FaCode,
+  FaPaintBrush // 1. Tambah icon baru untuk Desain
 } from 'react-icons/fa';
 import type { IconType } from "react-icons";
 
 interface TechDivision {
-  id: 'web' | 'game' | 'app';
+  // 2. Update Interface: Tambahkan 'design'
+  id: 'web' | 'game' | 'app' | 'design';
   title: string;
   description: string; 
   items: string[];
 }
 
+// 3. Update Icon Map
 const techIconMap: { [key in TechDivision['id']]: IconType } = {
   'web': FaGlobe,
   'game': FaGamepad,
-  'app': FaMobileAlt
+  'app': FaMobileAlt,
+  'design': FaPaintBrush // Mapping icon desain
 };
 
 const Services = () => {
@@ -81,7 +85,6 @@ const Services = () => {
           </div>
 
           <div className="bg-[#FEFEFE]/5 backdrop-blur-xl rounded-[2rem] p-8 md:p-12 border border-[#FEFEFE]/10 hover:border-[#f66d9d]/30 transition-all duration-500 shadow-2xl relative overflow-hidden group">
-            {/* Decorative big icon */}
             <FaGraduationCap className="absolute -right-10 -bottom-10 text-[200px] text-[#FEFEFE]/5 rotate-12 group-hover:rotate-0 transition-transform duration-700" />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
@@ -112,15 +115,20 @@ const Services = () => {
             </h3>
           </div>
 
-          {/* Grid untuk 3 Divisi */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* 4. UPDATE GRID LAYOUT: 
+             Karena sekarang ada 4 item, saya ubah layoutnya:
+             - Mobile: 1 kolom
+             - Tablet/Laptop Kecil: 2 kolom (grid-cols-2)
+             - Desktop Besar: 4 kolom (xl:grid-cols-4) agar sejajar semua
+          */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {content.services.technology.divisions.map((div: TechDivision, index: number) => {
               const IconComponent = techIconMap[div.id];
               
               return (
                 <div 
                   key={index} 
-                  className="group bg-[#FEFEFE]/5 backdrop-blur-md rounded-[2rem] p-8 border border-[#FEFEFE]/10 hover:bg-[#FEFEFE]/10 hover:border-[#f66d9d]/50 transition-all duration-300 hover:-translate-y-2"
+                  className="group bg-[#FEFEFE]/5 backdrop-blur-md rounded-[2rem] p-8 border border-[#FEFEFE]/10 hover:bg-[#FEFEFE]/10 hover:border-[#f66d9d]/50 transition-all duration-300 hover:-translate-y-2 flex flex-col"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-[#f66d9d] to-[#54428e] rounded-2xl flex items-center justify-center shrink-0 shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="text-3xl text-[#FEFEFE]" />
@@ -129,11 +137,12 @@ const Services = () => {
                   <h4 className="text-2xl font-bold text-[#FEFEFE] mb-3">
                     {div.title}
                   </h4>
-                  <p className="text-[#FEFEFE]/60 text-sm mb-6 h-10">
+                  <p className="text-[#FEFEFE]/60 text-sm mb-6 min-h-[40px]">
                     {div.description}
                   </p>
                   
-                  <div className="pt-6 border-t border-[#FEFEFE]/10">
+                  {/* mt-auto memastikan list item mulai dari posisi yang rapi jika deskripsi pendek */}
+                  <div className="pt-6 border-t border-[#FEFEFE]/10 mt-auto">
                     {renderListItems(div.items)}
                   </div>
                 </div>

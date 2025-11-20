@@ -104,7 +104,21 @@ const id = {
                         "UI/UX Design",
                         "Social Media Management"
                     ]
+                },
+                {
+                    "id": "design",
+                    "title": "Divisi Desain & Animasi",
+                    "description": "Solusi visual kreatif, motion graphics, dan animasi berkualitas tinggi.",
+                "items": [
+                    "Animation For Businesses",
+                    "Animation For Students",
+                    "Animation For Content Creators",
+                    "Custom Motion Graphics",
+                    "Video Animation",
+                    "Anime Design"
+                ]
                 }
+                
             ]
         }
     },
