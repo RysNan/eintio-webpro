@@ -216,14 +216,20 @@ const id = {
         ]
     },
     "footer": {
-        "description": "Solusi terpercaya untuk pendidikan dan teknologi",
+        "description": "Solusi terpercaya untuk transformasi digital dan pengembangan SDM di bidang teknologi informasi dan pendidikan.",
         "quickLinks": {
             "title": "Tautan Cepat",
-            "links": ["Beranda", "Tentang Kami", "Layanan", "Portfolio", "Kontak"]
+            "links": ["Beranda", "Perusahaan", "Layanan", "Proyek", "Kontak"]
         },
         "services": {
-            "title": "Layanan",
-            "items": ["Web Development", "Mobile Apps", "E-Learning", "Consulting"]
+            "title": "Divisi Layanan",
+            "items": [
+                "Bimbingan Akademik",
+                "Website Development",
+                "Game Development",
+                "Mobile & App Development",
+                "Desain & Animasi" 
+            ]
         },
         "social": {
             "title": "Media Sosial",

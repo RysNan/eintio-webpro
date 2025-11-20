@@ -215,14 +215,20 @@ const en = {
         ]
     },
     "footer": {
-        "description": "Trusted solutions for education and technology",
+        "description": "Trusted solutions for digital transformation and human resource development in information technology and education.",
         "quickLinks": {
             "title": "Quick Links",
-            "links": ["Home", "About Us", "Services", "Portfolio", "Contact"]
+            "links": ["Home", "Company", "Services", "Projects", "Contact"]
         },
         "services": {
-            "title": "Services",
-            "items": ["Web Development", "Mobile Apps", "E-Learning", "Consulting"]
+            "title": "Service Divisions",
+            "items": [
+                "Academic Guidance",
+                "Website Development",
+                "Game Development",
+                "Mobile & App Development",
+                "Design & Animation"
+            ]
         },
         "social": {
             "title": "Social Media",
