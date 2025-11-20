@@ -1,7 +1,7 @@
 import { useLanguage } from "../context/LanguageContext";
 import { FaLightbulb, FaHandshake, FaEye, FaFlag, FaStar, FaCheckCircle } from 'react-icons/fa';
 import type { IconType } from "react-icons";
-import OrganizationalChart from "./OrganizationalChart"; // Komponen Profile CEO
+import OrganizationalChart from "./OrganizationalChart"; 
 
 interface AboutValue {
   type: 'innovation' | 'quality' | 'collaboration';
