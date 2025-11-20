@@ -24,7 +24,7 @@ const techIconMap: { [key in TechDivision['id']]: IconType } = {
   'web': FaGlobe,
   'game': FaGamepad,
   'app': FaMobileAlt,
-  'design': FaPaintBrush // Mapping icon desain
+  'design': FaPaintBrush 
 };
 
 const Services = () => {
@@ -115,12 +115,6 @@ const Services = () => {
             </h3>
           </div>
 
-          {/* 4. UPDATE GRID LAYOUT: 
-             Karena sekarang ada 4 item, saya ubah layoutnya:
-             - Mobile: 1 kolom
-             - Tablet/Laptop Kecil: 2 kolom (grid-cols-2)
-             - Desktop Besar: 4 kolom (xl:grid-cols-4) agar sejajar semua
-          */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {content.services.technology.divisions.map((div: TechDivision, index: number) => {
               const IconComponent = techIconMap[div.id];
