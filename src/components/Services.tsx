@@ -141,7 +141,6 @@ const Services = () => {
                     {div.description}
                   </p>
                   
-                  {/* mt-auto memastikan list item mulai dari posisi yang rapi jika deskripsi pendek */}
                   <div className="pt-6 border-t border-[#FEFEFE]/10 mt-auto">
                     {renderListItems(div.items)}
                   </div>
